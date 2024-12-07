@@ -16,7 +16,7 @@ export default function Ui({ postListHome }: uiProps) {
 
     return (        <div>
             <section id='home' className=' flex items-center justify-between p-40  w-screen h-screen'>
-                <Image src={'/images/home.png'} width={500} height={500} alt='home' />
+                <img src={'/home.png'} width={500} height={500} alt='home' />
                 <div className='flex-col space-y-10'>
                     <p className='text-6xl font-semibold'><span className='text-blue-500'>We care</span><br />about your health</p>
                     <p className='text-xl text-gray-400'>Good health is state of mental, physical and social well being and it does not mean absence of desease.</p>
@@ -30,7 +30,7 @@ export default function Ui({ postListHome }: uiProps) {
                     <p className='text-xl text-gray-400 '>Your trusted partner in health. We provide comprehensive healthcare services, from routine check-ups to specialized treatments. Our dedicated team of experienced professionals is committed to delivering compassionate care and exceptional outcomes</p>
 
                 </div>
-                <Image src={'/images/about-2.png'} width={500} height={500} alt='home' />
+                <img src={'/about-2.png'} width={500} height={500} alt='home' />
             </section>
 
             <section id='service' className='h-[80vh] w-full flex justify-center items-center'>
@@ -69,7 +69,7 @@ export default function Ui({ postListHome }: uiProps) {
             </section>
 
 
-            <section id='doctor' className='h-[80vh] w-full flex justify-center items-center'>
+            <section id='doctor' className='h-screen w-full flex justify-center items-center'>
                 <div className='flex-col space-y-32 w-max'>
                     <div className='flex-col space-y-3'>
                         <p className='text-5xl text-center '>Meet Our Doctor</p>
@@ -79,22 +79,22 @@ export default function Ui({ postListHome }: uiProps) {
                         {[
                             {
                                 name: "Dr. John Doe",
-                                img: "images/doctor-1.jpg",
+                                img: "doctor-1.jpg",
                                 specialty: "Cardiologist"
                             },
                             {
                                 name: "Dr. Jane Smith",
-                                img: "images/doctor-2.jpg",
+                                img: "doctor-2.jpg",
                                 specialty: "Pediatrician"
                             },
                             {
                                 name: "Dr. Emily Johnson",
-                                img: 'images/doctor-3.jpg',
+                                img: "doctor-3.jpg",
                                 specialty: "Dermatologist"
                             }
                         ].map((doctor, index) => (
                             <div key={index} className=" bg-white flex-col space-y-4 rounded-lg shadow-lg p-4 w-56 h-80 hover:scale-110 transition-all">
-                                <Image src={doctor.img} alt={doctor.name} width={160} height={160} className="w-full h-40 object-cover rounded-lg" />
+                                <img src={doctor.img} alt={doctor.name} width={160} height={160} className="w-full h-40 object-cover rounded-lg" />
                                 <div>
                                     <h3 className="text-xl text-center font-semibold text-blue-600 mt-2">{doctor.name}</h3>
                                     <p className="text-center text-gray-600">{doctor.specialty}</p>
@@ -117,12 +117,12 @@ export default function Ui({ postListHome }: uiProps) {
                         <div className="flex space-x-10 px-10 w-max">
                             {postListHome !== undefined && postListHome.map((post, index) => (
                                 <div key={index} className="flex-col space-y-5 bg-white rounded-lg shadow-lg p-2 w-64">
-                                    <Image src={post.image} alt={post.title} width={128} height={128} className=" mx-auto" />
+                                    <img src={post.image} alt={post.title} width={128} height={128} className=" mx-auto" />
                                     <div>
                                         <h3 className="text-xl text-center text-blue-600">{post.title}</h3>
-                                        <p className="text-center text-gray-600 ">{post.desc}</p>
+                                        <p className="text-center text-gray-600 line-clamp-4">{post.desc}</p>
                                     </div>
-                                    <button className="mx-auto bg-blue-600 mt-auto text-white py-2 px-4 rounded hover:bg-white hover:text-blue-600 border border-blue-600 transition duration-200">Blog ke {index}</button>
+                                    <button className="mx-auto bg-blue-600 mt-auto text-white py-2 px-4 rounded hover:bg-white hover:text-blue-600 border border-blue-600 transition duration-200">See More</button>
                                 </div>
                             ))}
                         </div>
