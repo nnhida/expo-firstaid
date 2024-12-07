@@ -137,7 +137,7 @@ export default function Ui({ postList, userList }: uiProps) {
                                 </th>
                                 <td className="px-6 py-4">{item.desc}</td>
                                 <td className="px-6 py-4">
-                                    <Image src={item.image} alt="image user" width={128} height={128}/>
+                                    <img src={item.image} alt="image user" width={128} height={128}/>
                                 </td>
                                 <td className="px-6 py-4">{nameId(item.userID)}</td>
                                 <td className="px-6 py-4 flex space-x-5">
